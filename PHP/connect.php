@@ -1,25 +1,30 @@
 <?php
-//Creating variables.
-$servername="localhost";
-$username="userTest";
-$password="pswd";
+function connectDB(){
+	//Creating variables.
+	$servername="localhost";
+	$username="userTest";
+	$password="";
+	$dbName="gameHost";
+	
+	//Creating connection with database.
+	$conn=new mysqli($servername, $username, $password);
 
-//Creating connection with database.
-$conn=new mysqli($servername, $username, $password);
+	//Checking connection state.
+	if($conn->connect_error){
+		die("Connection failed: " . $conn->connect_error); //"->" work for acess other variable value.
+	}
 
-//Checking connection state.
-if($conn->connect_error){
-	die("Connection failed: " . $conn->connect_error); //"->" work for acess values of other variable.
-}
+	if($conn->(query)$sql===TRUE){
+		echo "Connection successfully";	
+	}else{
+		echo"Error creating database: " . $conn->error;
+	}
 
-//Creating database.
-$sql="CREATE DATABASE myproject"
-if($conn->(query)$sql===TRUE){
-	echo "Connection successfully";	
-}else{
-	echo"Error creating database: " . $conn->error;
+	return $conn;
 }
 
 //Closing database connection.
-$conn->close();
+function closeCon($conn){
+	$conn->close();
+}
 ?>
