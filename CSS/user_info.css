@@ -1,222 +1,119 @@
-:root {
-    --salmon: #e6ceac;
-    --blue: #292418;
-    --cyan: #cdba94;
-    --gray: #8b7d62;
-    --pink: #a48d6a;
-  
-  }
-  
-  
-  @font-face {
-    font-family: Seaweed;
-    src: url(../fonts/SeaweedScript-Regular.ttf);
-  }
-  
-  
-  @font-face {
-    font-family: Baskerville-Normal;
-    src: url(../fonts/baskerville/normal.woff);
-  }
-  
-  @font-face {
-    font-family: Baskerville-Bold;
-    src: url(../fonts/baskerville/bold.woff);
-  }
-  
-  @font-face {
-    font-family: Baskerville-Italic;
-    src: url(../fonts/baskerville/italic.woff);
-  }
-  
-  body {
-  
-    background-color: var(--blue);
-  
-  }
-  
-  .Lievro1,
-  .Lievro2,
-  .Lievro3 {
-    border: 0.5vh outset var(--cyan);
-    background-color: var(--gray);
-    border-radius: 5%;
-    width: 35vw;
-    height: 26vh;
-    position: absolute;
-    left: 100vh;
-  
-  }
-  
-  .Lievro1 {
-    bottom: 65vh;
-  }
-  
-  .Lievro2 {
-    bottom: 35vh;
-  }
-  
-  .Lievro3 {
-    bottom: 6vh;
-  }
-  
-  * {
+* 
+{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    height: 100vh;
-    width: 100%;
-  }
-  
-  h1 {
-    font-family: sans-serif;
+}
+
+body 
+{
+    font-family: Arial, sans-serif;
+    color: #e6ceac;
+    background-size: 150vw 150vh, cover;
+}
+
+.container 
+{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    min-height: 100vh;
+}
+
+.sidebar 
+{
+    background: #73654a;
+    padding: 20px;
     text-align: center;
-    font-size: 1.8rem;
-    color: var(--salmon);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+.menu 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-button 
+{
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 4px;
+}
+
+.logo 
+{
+    margin-bottom: 20px;
+}
   
-  .profile-pic-div {
-    background-color: var(--gray);
-    height: 18vh;
-    width: 18vh;
-    position: absolute;
-    bottom: 68vh;
-    left: 25vh;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    overflow: hidden;
-    border: 0.5vh outset var(--cyan);
-  
-  }
-  
-  #photo {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0vh;
-  }
-  
-  #file {
-    display: none;
-  }
-  
-  #uploadBtn {
-    height: 2.5rem;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: var(--pink);
-    line-height: 1.8rem;
-    font-family: sans-serif;
-    font-size: 0.9rem;
-    cursor: pointer;
-    display: none;
-  }
-  
-  #idLivro1,
-  #idLivro2,
-  #idLivro3 {
-    width: 5vw;
-    height: 16vh;
-    position: absolute;
-    left: 1vh;
-    bottom: 4vh;
-  
-  }
-  
-  .textLivro1,
-  .textLivro2,
-  .textLivro3 {
-    left: 6vw;
-    bottom: 14vh;
-    position: absolute;
-    font-size: 1rem;
-    color: var(--salmon);
-  
-  }
-  
-  .dataLivro1,
-  .dataLivro2,
-  .dataLivro3 {
-    position: absolute;
-    left: 1vw;
-    bottom: 1vh;
-    font-size: 1.8vh;
-    color: var(--salmon);
-  
-  }
-  
-  .titleLivro1,
-  .titleLivro2,
-  .titleLivro3 {
-    position: absolute;
-    bottom: 21vh;
-    left: 1vw;
-    font-size: 1.8vh;
-    color: var(--salmon);
-  }
-  
-  .usuario {
-    position: absolute;
-    width: 5vw;
-    height: 3vh;
-    left: 36vh;
-    bottom: 80vh;
-    border-radius: 10%;
-    border: 0.5vh outset var(--cyan);
-    background-color: var(--gray);
-    color: var(--salmon);
-  }
-  
-  button.editBio {
-    left: 18vw;
-    position: absolute;
-    border: 0.5 outset var(--cyan);
-    border-radius: 27%;
-    font-size: 1.5vh;
-    background-color: var(--gray);
-    bottom: 80vh;
-    width: 5vw;
+.logo img 
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.content 
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.box 
+{
+    background-color: #73654a;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.home-content 
+{
+    display: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.link-button {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) 
+{
+    .container 
+    {
+      grid-template-columns: 1fr;
+    }
     
-  }
-  
-  button.editBio:hover{
-  
-  cursor: pointer;
-  
-  }
-  
-  button.editName{
-  
-    left: 18vw;
-    position: absolute;
-    border: 0.5 outset var(--cyan);
-    border-radius: 27%;
-    font-size: 1.5vh;
-    background-color: var(--gray);
-    bottom: 90vh;
-    width: 5vw;
-  
-  }
-  
-  button.editName:hover{
-  
-  cursor: pointer;
-  
-  }
-  
-  #Bio{
-  
-  display: none;
-  
-  }
-  
-  
-  
+    .sidebar 
+    {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    
+    .menu 
+    {
+      flex-direction: row;
+      gap: 5px;
+    }
+    
+    .content 
+    {
+      padding: 10px;
+    }
+    
+    .home-content 
+    {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+}  
