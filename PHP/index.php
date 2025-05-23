@@ -1,5 +1,4 @@
 <?PHP
-include'connect.php';
-$conn=connectDB():
-
+include 'databaseConnect.php';
+$conn=connectDB();
 ?>
