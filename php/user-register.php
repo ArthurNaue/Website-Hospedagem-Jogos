@@ -1,21 +1,21 @@
 <?php
-include 'databaseConnect.php';
-$pdo=connect();
+include 'connect.php';
+$pdo=connect_db();
 
 //verify register type to make inserts on database.
-if(isset($_POST['userRegister'])) {
+if(isset($_POST['user_register'])) {
     $username=$_POST['username'];
     $email=$_POST['email'];
-    $pswd=$_POST['password'];
+    $password=$_POST['password'];
 
     //Transform user password in hash to insert in database.
-    $hashPswd=password_hash($pswd, PASSWORD_DEFAULT);
+    $hashpswd=password_hash($pswd,PASSWORD_DEFAULT);
 
     //Stores created user variables.
-    $sqlUserInsert=$conn->prepare("INSERT INTO users(userName,email,hashPswd) VALUES(?,?,?,?)");
+    $sql_user_insert=$conn->prepare("INSERT INTO users(username,email,hashpswd) VALUES(?,?,?,?)");
 
     //Linked query parametters in variable values.
-    $stmt->bind_param("sss",$username,$email,$hashPswd);
+    $stmt->bind_param("sss",$username,$email,$hashpswd);
 
     //Execute action.
     $stmt->execute();
@@ -23,4 +23,5 @@ if(isset($_POST['userRegister'])) {
     //Close after executed.
     $stmt->close();
 }
+$result=$conn->query("SELECT * FROM users");
 ?>

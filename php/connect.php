@@ -1,8 +1,8 @@
 <?php
-function connect(){
+function connect_db(){
 	//Creating variables.
 	$dsn="mysql:host=localhost;dbname=hospedagem_jogos;charset=utf8mb4"; //Connection string, stores database informations to easily.
-	$username='userTest';
+	$username='root';
 	$password='1234';
 
 	//Try connection with database.
@@ -22,7 +22,7 @@ function connect(){
 	}
 
 //Closing database connection. PDO close connection when the php code block reaches the end, but for manual closed, this function is here.
-function disconnect(){
+function disconnect_db(){
 	$pdo=null;
 }
 ?>
