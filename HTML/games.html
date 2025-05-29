@@ -2,28 +2,22 @@
 <!DOCTYPE html>
 <!--  INICIO PAGINA   -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/CSS/games.css">
-  </head>
-  <body style="background: url('assets/images/githubLogo.png'); background-size: 720x720 no-repeat center/cover; background-color: #292418;">
-    <div class="container">
-      <aside class="sidebar">
-        <div class="logo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="/CSS/index.css">
+        <script src="/JS/teste.js"></script>
+    </head>
+    <body style="background-color: #e6ceac;">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/index.html">HOME</a>
+        </div> 
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">&#9776; ABRIR</button>
+            <h2>Hospedagem Jogos</h2>
+            <p>Arthur, Michel e Victor</p>
         </div>
-        <nav class="menu">
-          <a href="/index.html" class="menu-button" style="background-color: #a48d6a; color: #292418;">HOME</a>
-        </nav>
-      </aside>
-      <main class="content">
-        <section id="home" class="box">
-          <h2 style="padding-bottom: 15px;">Games</h2>
-          <div class="home-content">
-          </div>
-      </main>
-    </div>
-  </body>
-<!--  FIM PAGINA   -->
+    </body>
 </html>
