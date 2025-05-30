@@ -7,17 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="/CSS/index.css">
-        <script src="/JS/teste.js"></script>
+        <script src="/JS/sidebar.js"></script>
     </head>
     <body style="background-color: #e6ceac;">
         <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/HTML/user_info.html">USER</a>
             <a href="/HTML/games.html">GAMES</a>
             <a href="https://github.com/ArthurNaue/Website-Hospedagem-Jogos">GITHUB</a>
         </div> 
         <div id="main">
-            <button class="openbtn" onclick="openNav()">&#9776; ABRIR</button>
+            <button id="button" class="openbtn" onclick="openOrCloseNav()">ABRIR</button>
             <h2>Hospedagem Jogos</h2>
             <p>Arthur, Michel e Victor</p>
         </div>
