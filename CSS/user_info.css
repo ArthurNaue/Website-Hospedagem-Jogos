@@ -1,119 +1,67 @@
-* 
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
 
-body 
-{
-    font-family: Arial, sans-serif;
-    color: #e6ceac;
-    background-size: 150vw 150vh, cover;
+*{
+  font-family: 'Public Pixel', sans-serif;
 }
-
-.container 
-{
-    display: grid;
-    grid-template-columns: 10% 90%;
-    min-height: 100vh;
-}
-
-.sidebar 
-{
-    background: #73654a;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #292418; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
   }
-
-.menu 
-{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.menu-button 
-{
-    text-decoration: none;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 4px;
-}
-
-.logo 
-{
-    margin-bottom: 20px;
-}
   
-.logo img 
-{
-    max-width: 100%;
-    height: auto;
-}
-
-.content 
-{
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.box 
-{
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #e6ceac;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #73654a;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #292418;
+    color: #e6ceac;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
     background-color: #73654a;
+  }
+  
+  #main {
+    transition: margin-left .5s;
     padding: 20px;
-    border-radius: 4px;
-}
-
-.home-content 
-{
-    display: row;
-    align-items: center;
-    gap: 15px;
-}
-
-.link-button {
-  text-decoration: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) 
-{
-    .container 
-    {
-      grid-template-columns: 1fr;
-    }
-    
-    .sidebar 
-    {
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 10px;
-    }
-    
-    .menu 
-    {
-      flex-direction: row;
-      gap: 5px;
-    }
-    
-    .content 
-    {
-      padding: 10px;
-    }
-    
-    .home-content 
-    {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-}  
+    color: #292418;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
