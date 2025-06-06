@@ -9,19 +9,15 @@ if(isset($_POST['user_register'])) {
     $password=$_POST['password'];
 
     //Transform user password in hash to insert in database.
-    $hashpswd=password_hash($pswd,PASSWORD_DEFAULT);
+    $hashpswd=password_hash($password,PASSWORD_DEFAULT);
 
     //Stores created user variables.
-    $sql_user_insert=$conn->prepare("INSERT INTO users(username,email,hashpswd) VALUES(?,?,?,?)");
+    $sql_user_insert=$pdo->prepare("INSERT INTO users(username,email,hashpswd) VALUES(?,?,?)");
 
     //Linked query parametters in variable values.
-    $stmt->bind_param("sss",$username,$email,$hashpswd);
-
-    //Execute action.
-    $stmt->execute();
-
-    //Close after executed.
-    $stmt->close();
+    $sql_user_insert->execute([$username, $email, $hashpswd]); 
+} else{
+    echo "Invalid Request";
 }
-$result=$conn->query("SELECT * FROM users");
+$result=$pdo->query("SELECT * FROM users");
 ?>

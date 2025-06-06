@@ -3,7 +3,7 @@ function connect_db(){
 	//Creating variables.
 	$dsn="mysql:host=localhost;dbname=hospedagem_jogos;charset=utf8mb4"; //Connection string, stores database informations to easily.
 	$username='root';
-	$password='1234';
+	$password='';
 
 	//Try connection with database.
 	try{
@@ -18,11 +18,7 @@ function connect_db(){
 
 	//If 'try' fail, kill connection and show the error.
 	} catch(PDOException $errorMessage){ //PDOException it's a error class, this argument catch the error, it's like true/false.
-		die("Conection error with database: " . $errorMessage->getMessage());
+		die("Connection error with database: " . $errorMessage->getMessage());
 	}
-
-//Closing database connection. PDO close connection when the php code block reaches the end, but for manual closed, this function is here.
-function disconnect_db(){
-	$pdo=null;
 }
 ?>

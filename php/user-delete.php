@@ -1,12 +1,13 @@
 <?php
-include 'connect.php'
+include 'connect.php';
+$pdo=connect_db();
 
-if(isset($_GET['delete'])){
-    $id=$_GET['delete'];
-    $stmt=$conn->prepare('DELETE FROM users WHERE id=?');
-    $stmt->bind_param('i',$id);
-    $stmt->execute();
-    $stmt->close();
+if(isset($_GET['user_id'])){
+    $id=intval($_GET['user_id']);
+    $sql_user_delete=$pdo->prepare('DELETE FROM users WHERE user_id=?');
+    $sql_user_delete->execute([$id]);
+} else{
+    echo "User id don't informed!";
 }
-$result=$conn->query('SELECT * FROM users');
+$result=$pdo->query('SELECT * FROM users');
 ?>
