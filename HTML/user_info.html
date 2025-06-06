@@ -8,6 +8,7 @@
         <title>Games</title>
         <link rel="stylesheet" href="/CSS/user_info.css">
         <script src="/JS/sidebar.js"></script>
+        <script src="/JS/user.js"></script>
     </head>
     <body style="background-color: #e6ceac;">
         <div id="mySidebar" class="sidebar">
@@ -17,7 +18,12 @@
         </div> 
         <div id="main">
             <button id="button" class="openbtn" onclick="openOrCloseNav()">ABRIR</button>
-            <h2>user_name</h2>
+        
+            <div class="user">
+                <img src="/IMG/linux.png" id="photo">
+                <input type="file" id="file" accept="image/*">
+                <label for="file" id="uploadBtn">Mudar Imagem</label>
+            </div>
         </div>
     </body>
 </html>
