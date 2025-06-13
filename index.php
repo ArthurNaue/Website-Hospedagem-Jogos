@@ -33,7 +33,16 @@ $row=$stmt->fetch();
   <button type="submit" name="user_register">Send</button>
 </form>
 
-<a href="php/user-delete.php?user_id=2" onclick="return confirm('Do you really want delete this user?')">Delete</a>
+<form action="php/user-show.php" method="get">
+  <button type="submit">Show Users</button>
+</form>
+
+<form action="php/user-delete.php" method="post">
+  <label for="user_id">User ID to delete:</label>
+  <input type="text" id="user_id" name="user_id" required>
+
+  <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
+</form>
 
 </body>
 </html>
