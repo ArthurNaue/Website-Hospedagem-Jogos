@@ -67,11 +67,12 @@
   }
 
   .user{
-    height: 150px;
-    width: 150px;
+    border: 10px;
+    height: 250px;
+    width: 250px;
     position:absolute;
     border-radius: 50%;
-    transform: translate(120%, 50%);
+    transform: translate(2%, 2%);
     overflow: hidden;
     border-style: double solid;
     background-color: #73654a;
@@ -95,4 +96,17 @@
     position: absolute;
     left: 30px;
     top: 50px;
+  }
+
+  .container{
+    border: 10px;
+    height: 700px;
+    width: 700px;
+    position:absolute;
+    overflow: hidden;
+    transform: translate(25px,10px);
+    border-style: double solid;
+    background-color: #d1c3ac;
+    border-color: #292418;
+    border-radius: 5%;
   }
