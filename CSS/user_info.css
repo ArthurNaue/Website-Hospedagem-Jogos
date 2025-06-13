@@ -65,3 +65,34 @@
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+
+  .user{
+    height: 150px;
+    width: 150px;
+    position:absolute;
+    border-radius: 50%;
+    transform: translate(120%, 50%);
+    overflow: hidden;
+    border-style: double solid;
+    background-color: #73654a;
+    border-color: #292418;
+  }
+
+  #photo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0vh;
+  }
+
+  #file {
+    display: none;
+  }
+
+  #uploadBtn {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    left: 30px;
+    top: 50px;
+  }
