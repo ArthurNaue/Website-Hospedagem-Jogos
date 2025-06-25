@@ -7,16 +7,29 @@ if(isset($_POST['user_register'])) {
     $username=$_POST['username'];
     $email=$_POST['email'];
     $password=$_POST['password'];
+    $user_image=$_FILES['user_image'];
 
-    //Transform user password in hash to insert in database.
-    $hashpswd=password_hash($password,PASSWORD_DEFAULT);
+    $upload_dir= '../uploads/profile_images/';
+    $image_name = uniqid() . '-' . basename($user_image['name']);
+    $image_path = $upload_dir . $image_name;
 
-    //Stores created user variables.
-    $sql_user_insert=$pdo->prepare("INSERT INTO users(username,email,hashpswd) VALUES(?,?,?)");
+    if(move_uploaded_file($user_image['tmp_name'], $image_path)){
 
-    //Linked query parametters in variable values.
-    $sql_user_insert->execute([$username, $email, $hashpswd]); 
-} else{
+        //Transform user password in hash to insert in database.
+        $hashpswd=password_hash($password,PASSWORD_DEFAULT);
+
+        //Stores created user variables.
+        $sql_user_insert=$pdo->prepare("INSERT INTO users(username, email, hashpswd, user_img) VALUES(?,?,?,?)");
+
+        //Linked query parametters in variable values.
+        $sql_user_insert->execute([$username, $email, $hashpswd, $image_path]);
+
+        echo "User's created.";
+    } else {
+        echo "User dont created";
+    }
+
+} else {
     echo "Invalid Request";
 }
 $result=$pdo->query("SELECT * FROM users");
