@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include 'connect.php';
 $pdo=connect_db();
 
@@ -9,7 +13,7 @@ if(isset($_POST['user_register'])) {
     $password=$_POST['password'];
     $user_image=$_FILES['user_image'];
 
-    $upload_dir= '../uploads/profile_images/';
+    $upload_dir= '../public/uploads/profile_images/';
     $image_name = uniqid() . '-' . basename($user_image['name']);
     $image_path = $upload_dir . $image_name;
 

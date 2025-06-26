@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Users</title>
+  <link rel="stylesheet" href="../public/css/index.css">
+</head>
+<body style="background-color: #e6ceac;">
+  <a href="../index.php"><button>Back</button></a>
+</body>
+</html>
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
