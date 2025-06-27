@@ -16,13 +16,13 @@ $row=$stmt->fetch();
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>USER REGISTER</title>
+        <title>USER LOGIN</title>
         <link rel="stylesheet" href="../../public/css/index.css">
         <script src="../../public/js/sidebar.js"></script>
     </head>
     <body style="background-color: #e6ceac;">
         <div id="mySidebar" class="sidebar">
-            <a href="./user_login_page.php">LOGIN</a>
+            <a href="./user_register_page.php">REGISTER</a>
             <a href="../../index.php">HOME</a>
             <a href="https://github.com/ArthurNaue/Website-Hospedagem-Jogos">GITHUB</a>
         </div> 
@@ -31,19 +31,11 @@ $row=$stmt->fetch();
 
             <button id="button" class="openbtn" onclick="openOrCloseNav()">OPEN</button>
 
-            <h3>REGISTER USER</h3>
+            <h3>LOGIN USER</h3>
 
             <div>
                 <form action="../../php/user-register.php" method="post" enctype="multipart/form-data">
-                    <label for="username">NAME</label>
-
-                    <br>
-
-                    <input type="text" id="username" name="username" required>
-
-                    <br>
-                    
-                    <label for="email">EMAIL</label>
+                    <label for="email">EMAIL OR USERNAME</label>
 
                     <br>
 
@@ -60,16 +52,7 @@ $row=$stmt->fetch();
                     <br>
                     <br>
 
-                    <label for="user_img">PROFILE PICTURE</label>
-
-                    <br>
-
-                    <input type="file" id="user_img" name="user_image" required>
-
-                    <br>
-                    <br>
-
-                    <button type="submit" name="user_register">REGISTER</button>
+                    <button type="submit" name="user_register">LOGIN</button>
                 </form>
             </div>
         </div>
