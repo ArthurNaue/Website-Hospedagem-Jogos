@@ -110,3 +110,26 @@
     border-color: #292418;
     border-radius: 5%;
   }
+
+  .username{
+    transform: translate(300px,60px);
+  }
+
+  .usermail{
+    transform: translate(300px,100px);
+  }
+
+  .edit{
+    cursor: pointer;
+    width: 200px;
+    transform: translate(300px,150px);
+    border-style: double solid;
+    background-color: #73654a;
+    border-color: #292418;
+    border-radius: 5%;
+    text-align: center;
+  }
+
+  .bio{
+    transform: translate(15px,270px);
+  }
