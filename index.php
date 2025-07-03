@@ -6,11 +6,7 @@ error_reporting(E_ALL);
 require 'php/connect.php';
 
 $pdo=connect_db();
-$sql="SELECT username, email, hashpswd FROM users";
-$stmt=$pdo->query($sql);
-$row=$stmt->fetch();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,12 +18,13 @@ $row=$stmt->fetch();
 </head>
 <body style="background-color: #e6ceac;">
 <div id="mySidebar" class="sidebar">
-    <a href="./public/html/user_info.html">USER</a>
-    <a href="./public/html/games.html">GAMES</a>
+    <a href="./public/html/user_info.php">USER</a>
+    <a href="./public/html/games_page.php">GAMES</a>
     <a href="https://github.com/ArthurNaue/Website-Hospedagem-Jogos">GITHUB</a>
     </div> 
 <div id="main">
   <button id="button" class="openbtn" onclick="openOrCloseNav()">OPEN</button>
+<<<<<<< Updated upstream
 
   <h3>Register User:</h3>
 
@@ -115,6 +112,8 @@ $row=$stmt->fetch();
     </form>
   </div>
 
+=======
+>>>>>>> Stashed changes
 </div>
 </body>
 </html>

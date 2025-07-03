@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="../public/css/index.css">
 </head>
 <body style="background-color: #e6ceac;">
+<<<<<<< Updated upstream
   <a href="../index.php"><button>Back</button></a>
+=======
+  <button onclick="window.history.back()">Back</button></a>
+>>>>>>> Stashed changes
 </body>
 </html>
 
@@ -28,8 +32,18 @@ try {
             echo "<li>ID: " . htmlspecialchars($user['user_id']);
             echo "<li>Username: " . htmlspecialchars($user['username']);
             echo "<li>Email: " . htmlspecialchars($user['email']);
+<<<<<<< Updated upstream
             echo "<li> <img src='" . htmlspecialchars($user['user_img']) . "' alt='User Image' style='max-width:100px; max-height:100px;'>";
             echo "<li>";
+=======
+            echo "<li><img src='../public/" . htmlspecialchars($user['user_img']) . "' alt='User Image' style='max-width:100px; max-height:100px;'>";
+            echo "<br>";
+            echo "<form action='user-delete.php' method='POST' style='display:inline-block; margin-top: 10px;' onsubmit='return confirm(\"Tem certeza que deseja remover este usuário?\");'>";
+            echo "<input type='hidden' name='user_id' value='" . htmlspecialchars($user['user_id']) . "'>";
+            echo "<button type='submit'>Remover</button>";
+            echo "</form>";
+            echo "<br>";
+>>>>>>> Stashed changes
         }
     }
 

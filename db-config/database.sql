@@ -13,6 +13,13 @@ CREATE TABLE games(
 	title VARCHAR(50) NOT NULL,
 	game_desc TEXT, -- Text data type for long descriptions.
 	publi_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	cover VARCHAR(255),
+	genre VARCHAR(100),
+	game_file VARCHAR(255),
 	posted_by INT NOT NULL,
 	FOREIGN KEY(posted_by) REFERENCES users(user_id) ON DELETE CASCADE -- Setting wich user id posted the game.
+<<<<<<< Updated upstream
 );
+=======
+);
+>>>>>>> Stashed changes
