@@ -19,7 +19,11 @@ CREATE TABLE games(
 	posted_by INT NOT NULL,
 	FOREIGN KEY(posted_by) REFERENCES users(user_id) ON DELETE CASCADE -- Setting wich user id posted the game.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 );
+=======
+);
+>>>>>>> Stashed changes
 =======
 );
 >>>>>>> Stashed changes

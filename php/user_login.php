@@ -1,7 +1,10 @@
 <?php
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
+=======
+>>>>>>> Stashed changes
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -42,5 +45,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     header('Location: ../index.php?login=failed');
     exit;
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 ?>

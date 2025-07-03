@@ -39,6 +39,10 @@ if(!$user){
             <a href="user_register_page.php">REGISTER</a>
             <a href="user_login_page.php">LOGIN</a>
             <a href="../../index.php">HOME</a>
+<<<<<<< Updated upstream
+=======
+            <a href="games_page.php">GAMES</a>
+>>>>>>> Stashed changes
             <a href="https://github.com/ArthurNaue/Website-Hospedagem-Jogos">GITHUB</a>
         </div> 
         <div id="main">

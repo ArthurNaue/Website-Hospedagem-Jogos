@@ -4,16 +4,23 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 if(session_status()!==PHP_SESSION_ACTIVE){
     session_start();
 }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 include 'connect.php';
 $pdo=connect_db();
 
 //verify register type to make inserts on database.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 if(isset($_POST['user_register'])) {
     $username=$_POST['username'];
@@ -44,6 +51,8 @@ if(isset($_POST['user_register'])) {
 } else {
     echo "Invalid Request";
 =======
+=======
+>>>>>>> Stashed changes
 if($_SERVER['REQUEST_METHOD']==='POST'){
     $username=trim($_POST['username']);
     $email=trim($_POST['email']);
@@ -110,6 +119,9 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     }
     header('Location: ../index.php?login=failed');
     exit;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 ?>

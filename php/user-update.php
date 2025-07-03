@@ -4,11 +4,17 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 if (!isset($_SESSION)) {
     session_start();
 }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 include 'connect.php';
 $pdo=connect_db();
@@ -18,6 +24,7 @@ $stmt->execute([$user_id]);
 $user=$stmt->fetch(PDO::FETCH_ASSOC);
 
 //verify register type to make inserts on database.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 if(isset($_POST['user_update'])) {
     $user_id=$_POST['user_id'];
@@ -62,6 +69,23 @@ if(isset($_POST['user_update'])){
         $username=$new_username;
     }
 
+=======
+if(isset($_POST['user_update'])){
+    $new_username=trim($_POST['username']);
+    $new_email=trim($_POST['email']);
+    $new_password=trim($_POST['password']);
+    $new_user_image=$_FILES['user_image'];
+
+    $username=$user['username'];
+    $email=$user['email'];
+    $hashpswd=$user['hashpswd'];
+    $user_image=$user['user_img'];
+
+    if(!empty($new_username)){
+        $username=$new_username;
+    }
+
+>>>>>>> Stashed changes
     if(!empty($new_email)){
         if (!filter_var($new_email,FILTER_VALIDATE_EMAIL)){
             echo "Email inválido!";
@@ -101,6 +125,9 @@ if(isset($_POST['user_update'])){
     header("Location: ../public/html/user_info.php");
     exit;
 }else{
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     echo "Invalid Request!";
 }

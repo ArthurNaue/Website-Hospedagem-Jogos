@@ -7,7 +7,11 @@
 </head>
 <body style="background-color: #e6ceac;">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <a href="../index.php"><button>Back</button></a>
+=======
+  <button onclick="window.history.back()">Back</button></a>
+>>>>>>> Stashed changes
 =======
   <button onclick="window.history.back()">Back</button></a>
 >>>>>>> Stashed changes
@@ -33,9 +37,12 @@ try {
             echo "<li>Username: " . htmlspecialchars($user['username']);
             echo "<li>Email: " . htmlspecialchars($user['email']);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             echo "<li> <img src='" . htmlspecialchars($user['user_img']) . "' alt='User Image' style='max-width:100px; max-height:100px;'>";
             echo "<li>";
 =======
+=======
+>>>>>>> Stashed changes
             echo "<li><img src='../public/" . htmlspecialchars($user['user_img']) . "' alt='User Image' style='max-width:100px; max-height:100px;'>";
             echo "<br>";
             echo "<form action='user-delete.php' method='POST' style='display:inline-block; margin-top: 10px;' onsubmit='return confirm(\"Tem certeza que deseja remover este usuário?\");'>";
@@ -43,6 +50,9 @@ try {
             echo "<button type='submit'>Remover</button>";
             echo "</form>";
             echo "<br>";
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }

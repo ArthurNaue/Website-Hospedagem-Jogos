@@ -25,6 +25,7 @@ $pdo=connect_db();
 <div id="main">
   <button id="button" class="openbtn" onclick="openOrCloseNav()">OPEN</button>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
   <h3>Register User:</h3>
 
@@ -112,6 +113,8 @@ $pdo=connect_db();
     </form>
   </div>
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 </div>

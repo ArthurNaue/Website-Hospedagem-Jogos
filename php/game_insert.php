@@ -67,7 +67,11 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     $stmt=$pdo->prepare("INSERT INTO games(title, game_desc, genre, cover, game_file, posted_by) VALUES(?,?,?,?,?,?)");
     $stmt->execute([$title, $desc, $genre, $cover_db_path, $game_db_path, $user_id]);
 
+<<<<<<< Updated upstream
     header("Location: ../public/html/game_page.php");
+=======
+    header("Location: ../public/html/games_page.php");
+>>>>>>> Stashed changes
     exit;
 }
 ?>
