@@ -23,15 +23,16 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     $stmt->execute([$username]);
     $user=$stmt->fetch(PDO::FETCH_ASSOC);
 
-    if($user && password_verify($password,$user['hashpswd'])){
+    if($user && password_verify($password,$user['hashpswd'])){//Check if informations is correct.
+        //Stores the user loged values.
         $_SESSION['user_id']=$user['user_id'];
         $_SESSION['username']=$user['username'];
         $_SESSION['type']=$user['type'];
 
-        if($user['type']==='admin'){
-            header('Location: ../public/templates/admin_page.php');
+        if($user['type']==='admin'){//Check user type to send loged user to some page.
+            header('Location: ../templates/admin_page.php');//In admin case.
         } else{
-            header('Location: ../index.php');
+            header('Location: ../index.php');//In user case.
         }
         exit;
     }

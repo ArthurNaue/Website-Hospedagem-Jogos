@@ -1,7 +1,7 @@
 <?php
 function connect_db(){
-	//Creating variables.
-	$dsn="mysql:host=localhost;dbname=hospedagem_jogos;charset=utf8mb4"; //Connection string, stores database informations to easily.
+	//Setting connection variables.
+	$dsn="mysql:host=localhost;dbname=hospedagem_jogos;charset=utf8mb4";	
 	$username='root';
 	$password='';
 
