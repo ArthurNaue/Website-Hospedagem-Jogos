@@ -1,0 +1,97 @@
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
+
+*{
+  font-family: 'Public Pixel', sans-serif;
+}
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #292418; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #e6ceac;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #73654a;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #292418;
+    color: #e6ceac;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #73654a;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+    color: #292418;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  .user{
+    position: absolute;
+    background-color: #73654a;
+    padding: 40px;
+    width: 80px;
+    height: 80px;
+    border: 10px;
+    top: 100px;
+    border-radius: 50%;
+    border-color: #292418;
+    border-style: double solid;
+    overflow: hidden;
+  }
+
+  #photo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0vh;
+  }
+
+  #file {
+    display: none;
+  }
+
+  #uploadBtn {
+    cursor: pointer;
+    display: none;
+  }
